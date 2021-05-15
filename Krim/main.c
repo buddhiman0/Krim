@@ -1,3 +1,11 @@
+//
+//  main.c
+//  Krim
+//
+//  Created by Krim Developers on 2021-05-16.
+//
+
+
 #include <stdio.h>
 #include "lexer.h"
 
@@ -7,7 +15,7 @@ int main(int argc, char* argv[])
     // Initilize the lexer
     lexer_T* lexer = init_lexer(
             "include `stdio.h` \n"
-            "var name = \"john doe\" \n"
+            "var name = \"Krim Programming Language\" \n"
             "print(name) \n"
         );
     

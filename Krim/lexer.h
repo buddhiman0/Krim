@@ -1,3 +1,11 @@
+//
+//  lexer.h
+//  Krim
+//
+//  Created by Krim Developers on 2021-05-16.
+//
+
+
 #ifndef LEXER_H
 #define LEXER_H
 

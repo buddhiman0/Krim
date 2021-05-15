@@ -1,4 +1,9 @@
-
+//
+//  lexer.c
+//  Krim
+//
+//  Created by Krim Developers on 2021-05-16.
+//
 
 #include "lexer.h"
 #include <stdlib.h>
