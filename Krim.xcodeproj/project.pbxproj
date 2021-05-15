@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF3A656326505CA000FC5B73 /* lexer.c in Sources */ = {isa = PBXBuildFile; fileRef = CF3A656226505CA000FC5B73 /* lexer.c */; };
+		CF3A656526505CA900FC5B73 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = CF3A656426505CA900FC5B73 /* main.c */; };
 		CF5D0D9326504027007498C5 /* makefile in Sources */ = {isa = PBXBuildFile; fileRef = CF5D0D9226504027007498C5 /* makefile */; };
-		CF5D0D9B26504071007498C5 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = CF5D0D9826504071007498C5 /* main.c */; };
 		CF5D0D9C26504071007498C5 /* tokens.c in Sources */ = {isa = PBXBuildFile; fileRef = CF5D0D9926504071007498C5 /* tokens.c */; };
-		CF5D0D9D26504071007498C5 /* lexer.c in Sources */ = {isa = PBXBuildFile; fileRef = CF5D0D9A26504071007498C5 /* lexer.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,11 +26,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CF3A656226505CA000FC5B73 /* lexer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lexer.c; sourceTree = "<group>"; };
+		CF3A656426505CA900FC5B73 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		CF5D0D7F26503D73007498C5 /* Krim */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Krim; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF5D0D9226504027007498C5 /* makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = makefile; sourceTree = "<group>"; };
-		CF5D0D9826504071007498C5 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = main.c; path = "../../Downloads/hello-ba4c96bfac8fbc947cd26b17c6161115e63719d9/src/main.c"; sourceTree = "<group>"; };
 		CF5D0D9926504071007498C5 /* tokens.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tokens.c; sourceTree = "<group>"; };
-		CF5D0D9A26504071007498C5 /* lexer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lexer.c; path = "../../Downloads/hello-ba4c96bfac8fbc947cd26b17c6161115e63719d9/src/lexer.c"; sourceTree = "<group>"; };
 		CF5D0D9E265041A9007498C5 /* lexer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lexer.h; sourceTree = "<group>"; };
 		CF5D0D9F265041A9007498C5 /* tokens.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tokens.h; sourceTree = "<group>"; };
 		CF5D0DA0265041AA007498C5 /* main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
@@ -76,8 +76,8 @@
 		CF5D0D8926503D94007498C5 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				CF5D0D9A26504071007498C5 /* lexer.c */,
-				CF5D0D9826504071007498C5 /* main.c */,
+				CF3A656226505CA000FC5B73 /* lexer.c */,
+				CF3A656426505CA900FC5B73 /* main.c */,
 				CF5D0D9926504071007498C5 /* tokens.c */,
 			);
 			name = src;
@@ -152,8 +152,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF5D0D9D26504071007498C5 /* lexer.c in Sources */,
-				CF5D0D9B26504071007498C5 /* main.c in Sources */,
+				CF3A656526505CA900FC5B73 /* main.c in Sources */,
+				CF3A656326505CA000FC5B73 /* lexer.c in Sources */,
 				CF5D0D9326504027007498C5 /* makefile in Sources */,
 				CF5D0D9C26504071007498C5 /* tokens.c in Sources */,
 			);
