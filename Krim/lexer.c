@@ -5,6 +5,8 @@
 //  Created by Krim Developers on 2021-05-16.
 //
 
+
+
 #include "lexer.h"
 #include <stdlib.h>
 #include <string.h>
@@ -15,13 +17,14 @@
 // The initilize our lexer, we need to get the contents of a file
 lexer_T* init_lexer(char* contents)
 {
-    lexer_T* lexer = calloc(1, sizeof(struct LEXER_STRUCT)); // Create a lexer variable
+    lexer_T* lexer = calloc(1, sizeof(struct lexer_struct)); // Create a lexer variable
     lexer->contents = contents; // Set the contents of the lexer to what we got
     lexer->i = 0; // Set the current index to 0
     lexer->c = contents[lexer->i]; // Set the current charecter to be the index
     
     return lexer; // return the lexer we created
 }
+
 
 // Move the current char to the next one, if it is the last char, it will not be called
 void lexer_advance(lexer_T* lexer)
@@ -50,36 +53,37 @@ void lexer_skip_whitespace(lexer_T* lexer)
 token_T* lexer_get_next_token(lexer_T* lexer)
 {
     // Create a while loop to search for the next token in the file contents
-    while (lexer->c != '\0' && lexer->i < strlen(lexer->contents))
-    {
-        // If there is any whitespace, we will call the whitespace function
-        if (lexer->c == ' ' || lexer->c == 10)
-            lexer_skip_whitespace(lexer);
+        while (lexer->c != '\0' && lexer->i < strlen(lexer->contents))
+        {
+            // If there is any whitespace, we will call the whitespace function
+            if (lexer->c == ' ' || lexer->c == 10)
+                lexer_skip_whitespace(lexer);
+            
+            // If it is an alphbet or a number, collect the name or the identifier
+            if (isalnum(lexer->c))
+                return lexer_collect_id(lexer);
+            
+            // If there is a string, we will collect the contents of a string
+            if (lexer->c == '"')
+                return lexer_collect_string(lexer);
         
-        // If it is an alphbet or a number, collect the name or the identifier
-        if (isalnum(lexer->c))
-            return lexer_collect_id(lexer);
-        
-        // If there is a string, we will collect the contents of a string
-        if (lexer->c == '"')
-            return lexer_collect_string(lexer);
-        
-        // If there is a accent sign, we will collect the contents of that accent sign
-        if (lexer->c == '`')
-            return lexer_collect_include_string(lexer);
-        
-        // If none of this alply, we will do a switch statment
         switch (lexer->c)
         {
+                
                 // We will just skip all of these signs
+
                 
             case '=': return lexer_advance_with_token(lexer, init_token(token_equals, lexer_get_current_char_as_string(lexer))); break;
-            case '(': return lexer_advance_with_token(lexer, init_token(token_left_parenthesis, lexer_get_current_char_as_string(lexer))); break;
-            case ')': return lexer_advance_with_token(lexer, init_token(token_right_parenthesis, lexer_get_current_char_as_string(lexer))); break;
+            case ';': return lexer_advance_with_token(lexer, init_token(token_semicolon, lexer_get_current_char_as_string(lexer))); break;
+            case '(': return lexer_advance_with_token(lexer, init_token(token_left_paren, lexer_get_current_char_as_string(lexer))); break;
+            case ')': return lexer_advance_with_token(lexer, init_token(token_right_paren, lexer_get_current_char_as_string(lexer))); break;
+            case '{': return lexer_advance_with_token(lexer, init_token(token_left_brace, lexer_get_current_char_as_string(lexer))); break;
+            case '}': return lexer_advance_with_token(lexer, init_token(token_right_brace, lexer_get_current_char_as_string(lexer))); break;
+            case ',': return lexer_advance_with_token(lexer, init_token(token_comma, lexer_get_current_char_as_string(lexer))); break;
         }
     }
     
-    return (void*)0;
+    return init_token(token_end_of_file, "\0");
 }
 
 // Get the insides of a string
@@ -112,28 +116,7 @@ token_T* lexer_collect_string(lexer_T* lexer)
     lexer_advance(lexer);
     
     // Return an init token
-    return init_token(token_char, value);
-}
-
-// Same thing as the 'lexer_collect_string' functoin but it's for the '`' type of strings
-token_T* lexer_collect_include_string(lexer_T* lexer)
-{
-    lexer_advance(lexer);
-    
-    char* value = calloc(1, sizeof(char));
-    value[0] = '\0';
-    
-    while (lexer->c != '`')
-    {
-        char* s = lexer_get_current_char_as_string(lexer);
-        value = realloc(value, (strlen(value) + strlen(s) + 1) * sizeof(char));
-        strcat(value, s);
-        
-        lexer_advance(lexer);
-    }
-    lexer_advance(lexer);
-    printf("FOUND INCLUDE STRING FILE \n");
-    return init_token(token_grave_accent, value);
+    return init_token(token_string, value);
 }
 
 // Collect the ID of the token
@@ -152,13 +135,7 @@ token_T* lexer_collect_id(lexer_T* lexer)
         lexer_advance(lexer);
     }
     
-    // Check if there is an include statment
-    if (value[0] == 'i' && value[1] == 'n' && value[2] == 'c' && value[3] == 'l' && value[4] == 'u' && value[5] == 'd') {
-        printf("FOUND INCLUDE STATEMENT");
-        printf("\n");
-    }
-    
-    return init_token(token_char, value);
+    return init_token(token_identifier, value);
 }
 
 // This is advance with a token

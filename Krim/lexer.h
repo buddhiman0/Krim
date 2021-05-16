@@ -9,11 +9,11 @@
 #ifndef LEXER_H
 #define LEXER_H
 
-#include "tokens.h" // include the tokens.h file
+#include "token.h" // include the tokens.h file
 
 
 // We will create a struct to store the current state of the lexer
-typedef struct LEXER_STRUCT {
+typedef struct lexer_struct {
     char c; // Current character the lexer is in
     unsigned int i; // Index
     char* contents; // The contents of the file

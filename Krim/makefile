@@ -1,25 +1,34 @@
-exec = krim.out
-sources = $(wildcard src/*.c) 
+exec = krim
+sources = $(wildcard *.c)
 objects = $(sources:.c=.o)
-flags = -g
+flags = -g -Wno-switch -Wno-return-type 
 
 
 $(exec): $(objects)
 	gcc $(objects) $(flags) -o $(exec)
 
-%.o: src/%.c include/%.h
+%.o: %.c %.h
 	gcc -c $(flags) $< -o $@
+#
+#run:
+#	make
 
-clean:
-	-rm *.out 
-	-rm *.o
-	-rm src/*.o
-
+build:
+	make
+	
+install:
+	make clean
+	make
+	cp ./krim /usr/local/bin/kk
+	clear
+	kk /Users/ashokpaudel/Documents/Krim/Krim/test.k
 
 run:
-	./krim.out
-
-install:
-	cp ./krim.out /usr/local/bin/krim
-
-
+	./krim test.k
+clean:
+	-rm -f *.out
+	-rm -f *.o
+	
+all:
+	sudo make install
+	

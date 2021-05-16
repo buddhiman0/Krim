@@ -6,51 +6,35 @@
 	objectVersion = 50;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		CF3A656326505CA000FC5B73 /* lexer.c in Sources */ = {isa = PBXBuildFile; fileRef = CF3A656226505CA000FC5B73 /* lexer.c */; };
-		CF3A656526505CA900FC5B73 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = CF3A656426505CA900FC5B73 /* main.c */; };
-		CF5D0D9326504027007498C5 /* makefile in Sources */ = {isa = PBXBuildFile; fileRef = CF5D0D9226504027007498C5 /* makefile */; };
-		CF5D0D9C26504071007498C5 /* tokens.c in Sources */ = {isa = PBXBuildFile; fileRef = CF5D0D9926504071007498C5 /* tokens.c */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		CF5D0D7D26503D73007498C5 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		CF3A656226505CA000FC5B73 /* lexer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lexer.c; sourceTree = "<group>"; };
-		CF3A656426505CA900FC5B73 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
-		CF5D0D7F26503D73007498C5 /* Krim */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Krim; sourceTree = BUILT_PRODUCTS_DIR; };
-		CF5D0D9226504027007498C5 /* makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = makefile; sourceTree = "<group>"; };
-		CF5D0D9926504071007498C5 /* tokens.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tokens.c; sourceTree = "<group>"; };
-		CF5D0D9E265041A9007498C5 /* lexer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lexer.h; sourceTree = "<group>"; };
-		CF5D0D9F265041A9007498C5 /* tokens.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tokens.h; sourceTree = "<group>"; };
-		CF5D0DA0265041AA007498C5 /* main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
+		E8454C27265091E00097D653 /* print.k */ = {isa = PBXFileReference; lastKnownFileType = text; path = print.k; sourceTree = "<group>"; };
+		E8454C4B265099C10097D653 /* makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; name = makefile; path = Krim/makefile; sourceTree = "<group>"; };
+		E8454C652650A3A80097D653 /* lexer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lexer.h; sourceTree = "<group>"; };
+		E8454C662650A3A80097D653 /* main.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
+		E8454C672650A3A80097D653 /* io.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = io.h; sourceTree = "<group>"; };
+		E8454C682650A3A80097D653 /* parser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = parser.h; sourceTree = "<group>"; };
+		E8454C692650A3A80097D653 /* ast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ast.h; sourceTree = "<group>"; };
+		E8454C6A2650A3A80097D653 /* scope.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = scope.h; sourceTree = "<group>"; };
+		E8454C6B2650A3A80097D653 /* token.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = token.h; sourceTree = "<group>"; };
+		E8454C6C2650A3A80097D653 /* visitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = visitor.h; sourceTree = "<group>"; };
+		E8454C6D2650A3B60097D653 /* io.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = io.c; sourceTree = "<group>"; };
+		E8454C6E2650A3B60097D653 /* scope.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = scope.c; sourceTree = "<group>"; };
+		E8454C6F2650A3B60097D653 /* ast.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ast.c; sourceTree = "<group>"; };
+		E8454C702650A3B60097D653 /* token.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = token.c; sourceTree = "<group>"; };
+		E8454C712650A3B60097D653 /* parser.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = parser.c; sourceTree = "<group>"; };
+		E8454C722650A3B60097D653 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		E8454C732650A3B60097D653 /* visitor.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = visitor.c; sourceTree = "<group>"; };
+		E8454C742650A3B60097D653 /* lexer.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lexer.c; sourceTree = "<group>"; };
+		E8454C772650AC5D0097D653 /* functions.k */ = {isa = PBXFileReference; lastKnownFileType = text; path = functions.k; sourceTree = "<group>"; };
+		E8454C792650AC990097D653 /* print2.k */ = {isa = PBXFileReference; lastKnownFileType = text; path = print2.k; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		CF5D0D7C26503D73007498C5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		CF5D0D7626503D72007498C5 = {
 			isa = PBXGroup;
 			children = (
 				CF5D0D8126503D73007498C5 /* Krim */,
+				E8454C4B265099C10097D653 /* makefile */,
 				CF5D0D8026503D73007498C5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,7 +42,6 @@
 		CF5D0D8026503D73007498C5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CF5D0D7F26503D73007498C5 /* Krim */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,7 +49,7 @@
 		CF5D0D8126503D73007498C5 /* Krim */ = {
 			isa = PBXGroup;
 			children = (
-				CF5D0D9226504027007498C5 /* makefile */,
+				E8454C762650AC450097D653 /* examples */,
 				CF5D0D8A26503D9A007498C5 /* include */,
 				CF5D0D8926503D94007498C5 /* src */,
 			);
@@ -76,9 +59,14 @@
 		CF5D0D8926503D94007498C5 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				CF3A656226505CA000FC5B73 /* lexer.c */,
-				CF3A656426505CA900FC5B73 /* main.c */,
-				CF5D0D9926504071007498C5 /* tokens.c */,
+				E8454C6F2650A3B60097D653 /* ast.c */,
+				E8454C6D2650A3B60097D653 /* io.c */,
+				E8454C742650A3B60097D653 /* lexer.c */,
+				E8454C722650A3B60097D653 /* main.c */,
+				E8454C712650A3B60097D653 /* parser.c */,
+				E8454C6E2650A3B60097D653 /* scope.c */,
+				E8454C702650A3B60097D653 /* token.c */,
+				E8454C732650A3B60097D653 /* visitor.c */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -86,34 +74,46 @@
 		CF5D0D8A26503D9A007498C5 /* include */ = {
 			isa = PBXGroup;
 			children = (
-				CF5D0D9E265041A9007498C5 /* lexer.h */,
-				CF5D0DA0265041AA007498C5 /* main.h */,
-				CF5D0D9F265041A9007498C5 /* tokens.h */,
+				E8454C692650A3A80097D653 /* ast.h */,
+				E8454C672650A3A80097D653 /* io.h */,
+				E8454C652650A3A80097D653 /* lexer.h */,
+				E8454C662650A3A80097D653 /* main.h */,
+				E8454C682650A3A80097D653 /* parser.h */,
+				E8454C6A2650A3A80097D653 /* scope.h */,
+				E8454C6B2650A3A80097D653 /* token.h */,
+				E8454C6C2650A3A80097D653 /* visitor.h */,
 			);
 			name = include;
 			sourceTree = "<group>";
 		};
+		E8454C762650AC450097D653 /* examples */ = {
+			isa = PBXGroup;
+			children = (
+				E8454C27265091E00097D653 /* print.k */,
+				E8454C772650AC5D0097D653 /* functions.k */,
+				E8454C792650AC990097D653 /* print2.k */,
+			);
+			path = examples;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
-/* Begin PBXNativeTarget section */
-		CF5D0D7E26503D73007498C5 /* Krim */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CF5D0D8626503D73007498C5 /* Build configuration list for PBXNativeTarget "Krim" */;
+/* Begin PBXLegacyTarget section */
+		E8454C45265096140097D653 /* Krim */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = E8454C46265096140097D653 /* Build configuration list for PBXLegacyTarget "Krim" */;
 			buildPhases = (
-				CF5D0D7B26503D73007498C5 /* Sources */,
-				CF5D0D7C26503D73007498C5 /* Frameworks */,
-				CF5D0D7D26503D73007498C5 /* CopyFiles */,
 			);
-			buildRules = (
-			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = "";
 			dependencies = (
 			);
 			name = Krim;
+			passBuildSettingsInEnvironment = 1;
 			productName = Krim;
-			productReference = CF5D0D7F26503D73007498C5 /* Krim */;
-			productType = "com.apple.product-type.tool";
 		};
-/* End PBXNativeTarget section */
+/* End PBXLegacyTarget section */
 
 /* Begin PBXProject section */
 		CF5D0D7726503D72007498C5 /* Project object */ = {
@@ -124,7 +124,7 @@
 				);
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
-					CF5D0D7E26503D73007498C5 = {
+					E8454C45265096140097D653 = {
 						CreatedOnToolsVersion = 12.5;
 					};
 				};
@@ -142,24 +142,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CF5D0D7E26503D73007498C5 /* Krim */,
+				E8454C45265096140097D653 /* Krim */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXSourcesBuildPhase section */
-		CF5D0D7B26503D73007498C5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CF3A656526505CA900FC5B73 /* main.c in Sources */,
-				CF3A656326505CA000FC5B73 /* lexer.c in Sources */,
-				CF5D0D9326504027007498C5 /* makefile in Sources */,
-				CF5D0D9C26504071007498C5 /* tokens.c in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
 		CF5D0D8426503D73007498C5 /* Debug */ = {
@@ -273,22 +259,29 @@
 			};
 			name = Release;
 		};
-		CF5D0D8726503D73007498C5 /* Debug */ = {
+		E8454C47265096140097D653 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B29PGN9AG4;
-				ENABLE_HARDENED_RUNTIME = YES;
+				DEBUGGING_SYMBOLS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = CKUP7H8DC7;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		CF5D0D8826503D73007498C5 /* Release */ = {
+		E8454C48265096140097D653 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B29PGN9AG4;
-				ENABLE_HARDENED_RUNTIME = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = CKUP7H8DC7;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -305,11 +298,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CF5D0D8626503D73007498C5 /* Build configuration list for PBXNativeTarget "Krim" */ = {
+		E8454C46265096140097D653 /* Build configuration list for PBXLegacyTarget "Krim" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CF5D0D8726503D73007498C5 /* Debug */,
-				CF5D0D8826503D73007498C5 /* Release */,
+				E8454C47265096140097D653 /* Debug */,
+				E8454C48265096140097D653 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
